@@ -1,7 +1,8 @@
-<html>
-<head>
+
+<!-- saved from url=(0036)https://git1975.github.io/mbrot.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <script>
-    	var maxIteration = 100;
+    	var maxIteration = 500;
         var root = {w: 0, h: 0, list: []};
         var dt;
         var workerCount = 0;
@@ -89,8 +90,8 @@
             var i, j, x1, y1, x2, y2, h, w;
             var canvas = document.getElementById("canvas");
             var context = canvas.getContext("2d");
-            h = 800;
-            w = 800;
+            h = 1860;
+            w = 900;
             x1 = -2.2;
             y1 = -1.5;
             x2 = 0.7;
@@ -107,7 +108,7 @@
             		cy += dy;
             		color = renderPoint(cx, cy);
             		
-            		context.fillStyle = (color < 50)?'black':'white';
+            		context.fillStyle = (color < 150)?'black':'white';
             		context.fillRect( i, j, 1, 1 );
             	}
             }
@@ -202,9 +203,10 @@
             var c = 0;
             for (var i = 0; i < data.length; i += 4) {
             	var color = out[c];
-            	imageData.data[i] = color*256/20;     // red
-            	imageData.data[i + 1] = color*256/30; // green
-            	imageData.data[i + 2] = color*256/40; // blue
+            	color = 256-color*256/maxIteration;
+            	imageData.data[i] = color*0.1;     // red
+            	imageData.data[i + 1] = color*0.4; // green
+            	imageData.data[i + 2] = color*0.8; // blue
 				
 				c++;
             }
@@ -231,7 +233,7 @@
             x2 = f[2];
             y2 = (x2 - x1)*canvas.height/canvas.width + y1;
             f[3] = y2;
-           	var divider = 3;
+           	var divider = 4;
            	var dw = Math.round(canvas.width/divider);
            	var dh = Math.round(canvas.height/divider);
            	var dx = Math.abs((x2-x1)/divider);
@@ -243,6 +245,8 @@
            	var status = document.getElementById("status");
        		status.innerHTML = '0%';
            	
+       		var arr = [];
+       		
            	var x = 0; y = 0; fx = x1; fy = y1; c = 0;
            	for(j = 0; j < divider; j++){
            		x = 0; 
@@ -258,9 +262,14 @@
                     
                     console.log('area.i: ' + JSON.stringify(area.i));
                     //console.log('area.f: ' + JSON.stringify(area.f));
-                    this.createWorker(area);
+                    //this.createWorker(area);
+                    arr.push(promiseArea(area));
            		}
-           	}        	           	
+           	}     
+           	
+           	Promise.all(arr).then(e => { 
+      		  //console.log(e);
+      		});
 
             /*var area = {maxIteration:maxIteration};
             area.i = {x1:0, y1:0, x2:800, y2:600};
@@ -296,21 +305,85 @@
             
             initWorkers();
         }
+        
+        function promiseArea(area) {
+	   	  return new Promise(function(resolve, reject) {
+	   		  console.log('promiseArea.i: ' + JSON.stringify(area.i));
+	   		  
+	   		  var renderPoint = function(p, q){
+	            	var x, y, x1, y1, r, n;
+	            	var x1 = p;
+	    	        var y1 = q;
+	    	        n = 0;
+	    	        do {
+	    	          x = x1;
+	    	          y = y1;
+	    	          x1 = x*x - y*y + p;
+	    	          y1 = 2*x*y + q;
+	    	          r = x1*x1 + y1*y1;
+	    	          n++;
+	    	        } while(n < self.maxIteration && r < 4.0);
+	    	        if(n >= self.maxIteration){
+	    	        	return 256;
+	    	        } else {
+	    	        	return n;
+	    	        }
+	              };
+		   		  
+	   		  var doRender = function(area) {
+        		var i, j, x1, y1, x2, y2, h, w;
+                w = area.i.x2 - area.i.x1;
+                h = area.i.y2 - area.i.y1;
+                x1 = area.f.x1;
+                y1 = area.f.y1;
+                x2 = area.f.x2;
+                y2 = area.f.y2;
+                var dx, dy, cx, cy, color;
+                dx = (x2 - x1)/w;
+                dy = (y2 - y1)/h;
+                cx = x1;
+                cy = y1;
+                
+                var out = new Uint16Array(h*w);
+                var c = 0;
+                for(j = 0; j < h; j++){
+                	cy += dy;
+                	cx = x1;
+                	for(i = 0; i < w; i++){
+                		cx += dx;  
+                		out[c] = self.renderPoint(cx, cy);
+                		c++;
+                	}
+                }
+                
+                return out;
+        	  };
+        	  
+        	  var out = doRender(area);
+        	  
+        	  var e = {data: {}};
+        	  e.data.area = area;
+        	  e.data.out = out;
+	   		  
+        	  workerOnMessage(e);
+        	  
+	   		  resolve(e);
+	   	  });
+       	}
     </script>
 </head>
-<body>
-<div id='input'>
+<body style="cursor: auto;">
+<div id="input">
 <!--input type='button' value='Обновить' onclick='refresh();'><br-->
-	<input type='button' value='R' onclick='initWorkers();'>
-	<input type='button' value='+' onclick='zoom(1);'>
-	<input type='button' value='-' onclick='zoom(-1);'>
+	<input type="button" value="R" onclick="initWorkers();">
+	<input type="button" value="+" onclick="zoom(1);">
+	<input type="button" value="-" onclick="zoom(-1);">
 </div>
-<div id='status'>
-    ...
-</div>
+<div id="status">0.57 seconds</div>
 
-<canvas id="canvas" width="800" height="600"></canvas>
+<canvas id="canvas" width="1860" height="900"></canvas>
 <!--canvas id="canvas1" width="1860" height="900"></canvas-->
 
-</body>
-</html>
+
+
+</body></html>
