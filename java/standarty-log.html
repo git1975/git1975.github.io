@@ -1,0 +1,282 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="LibreOffice 4.1.6.2 (Linux)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="0;0">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { margin-left: 0.79in; margin-right: 0.79in; margin-top: 0.49in; margin-bottom: 0.59in }
+		P { margin-bottom: 0.08in; direction: ltr; widows: 2; orphans: 2 }
+		P.western { font-size: 12pt; so-language: en-US }
+		P.cjk { font-size: 12pt; so-language: en-US }
+		P.ctl { font-size: 12pt; so-language: ar-SA }
+		A:link { so-language: zxx }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="RTL">
+<DIV TYPE=HEADER>
+	<P DIR="LTR" CLASS="western" STYLE="margin-top: 0.19in; margin-bottom: 0.26in">
+	<BR><BR>
+	</P>
+</DIV>
+<P DIR="LTR" ALIGN=LEFT STYLE="margin-bottom: 0in; background: #ffffff; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+<BR>
+</P>
+<P DIR="LTR" ALIGN=LEFT STYLE="margin-bottom: 0in; background: #ffffff; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+<FONT COLOR="#000000"><FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3 STYLE="font-size: 13pt"><SPAN LANG="ru-RU"><B>Используемые
+уровни логирования</B></SPAN></FONT><FONT SIZE=3 STYLE="font-size: 13pt"><B>:</B></FONT></FONT></FONT></FONT></P>
+<P DIR="LTR" ALIGN=LEFT STYLE="margin-bottom: 0in; background: #ffffff; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+<BR>
+</P>
+<P DIR="LTR" ALIGN=LEFT STYLE="margin-bottom: 0in; background: #ffffff; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+<FONT COLOR="#000000"><FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Debug
+- <SPAN LANG="ru-RU">логирование для дебага</SPAN>.</FONT></FONT></FONT></P>
+<P DIR="LTR" ALIGN=LEFT STYLE="margin-bottom: 0in; background: #ffffff; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+<FONT COLOR="#000000"><FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="de-DE">Information
+- </SPAN>логирование информации общего
+характера.</FONT></FONT></FONT></P>
+<P DIR="LTR" ALIGN=LEFT STYLE="margin-bottom: 0in; background: #ffffff; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+<FONT COLOR="#000000"><FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">Warning
+- </SPAN><SPAN LANG="ru-RU">логирование предупреждений</SPAN>,
+<SPAN LANG="ru-RU">потенциальных ошибок</SPAN>.
+Например, <SPAN LANG="ru-RU">логирование
+сообщений</SPAN>, <SPAN LANG="ru-RU">которые уже
+были приняты и обработаны</SPAN>.</FONT></FONT></FONT></P>
+<P DIR="LTR" ALIGN=LEFT STYLE="margin-bottom: 0in; background: #ffffff; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+<FONT COLOR="#000000"><FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Error
+- <SPAN LANG="ru-RU">логирование ошибок системы</SPAN>.</FONT></FONT></FONT></P>
+<P DIR="LTR" ALIGN=LEFT STYLE="margin-bottom: 0in; background: #ffffff; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+<FONT COLOR="#000000"><FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Fatal
+- <SPAN LANG="ru-RU">логирование наиболее
+критических ошибок</SPAN>, <SPAN LANG="ru-RU">которые
+могут привести к частичному отказу
+системы</SPAN>.</FONT></FONT></FONT></P>
+<P DIR="LTR" ALIGN=LEFT STYLE="margin-bottom: 0in; background: #ffffff; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+<BR>
+</P>
+<P DIR="LTR" ALIGN=LEFT STYLE="margin-bottom: 0in; background: #ffffff; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+<BR>
+</P>
+<P DIR="LTR" ALIGN=LEFT STYLE="margin-bottom: 0in; background: #ffffff; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+<FONT COLOR="#000000"> <FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="ru-RU">Логирование
+взаимодействия с брокером сообщений
+</SPAN>Kafka</FONT></FONT></FONT></P>
+<P DIR="LTR" ALIGN=LEFT STYLE="margin-bottom: 0in; background: #ffffff; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+<FONT COLOR="#000000"><FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Шаблон
+при успешной отправке сообщения в брокер
+ : &quot;<SPAN LANG="ru-RU">Сообщение </SPAN><SPAN LANG="it-IT">{messageId}
+</SPAN><SPAN LANG="ru-RU">успешно опубликовано в
+топик </SPAN><SPAN LANG="en-US">{topic:l},
+partition:{partition}, offset:{offSet}&quot;, </SPAN><SPAN LANG="ru-RU">где
+</SPAN><SPAN LANG="it-IT">messageId - </SPAN><SPAN LANG="ru-RU">идентификатор
+сообщения</SPAN><SPAN LANG="en-US">, topic - </SPAN><SPAN LANG="ru-RU">наименование
+топика</SPAN><SPAN LANG="fr-FR">, partition - </SPAN>номер
+партишена<SPAN LANG="en-US">, offset - </SPAN><SPAN LANG="ru-RU">номер
+оффсета</SPAN>.</FONT></FONT></FONT></P>
+<P DIR="LTR" ALIGN=LEFT STYLE="margin-bottom: 0in; background: #ffffff; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+<FONT COLOR="#000000"><FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Шаблон
+подписки на топик : &quot;Подписка на топик
+<SPAN LANG="en-US">{topicName}&quot;, </SPAN><SPAN LANG="ru-RU">где
+</SPAN><SPAN LANG="en-US">topicName - </SPAN><SPAN LANG="ru-RU">наименование
+топика</SPAN>.</FONT></FONT></FONT></P>
+<P DIR="LTR" ALIGN=LEFT STYLE="margin-bottom: 0in; background: #ffffff; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+<FONT COLOR="#000000"><FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="ru-RU">Шаблон
+вычитывания сообщения из брокера </SPAN>:
+&quot;Получено сообщение из топика
+<SPAN LANG="en-US">{topicName}. Partition:{partition},
+offset:{offset}, message:{message}, id:{messageId},
+requestId:{requestId}&quot;, </SPAN><SPAN LANG="ru-RU">где
+</SPAN><SPAN LANG="en-US">topicName - </SPAN><SPAN LANG="ru-RU">наименование
+топика</SPAN><SPAN LANG="fr-FR">, partition - </SPAN>номер
+партишена<SPAN LANG="en-US">, offset - </SPAN><SPAN LANG="ru-RU">номер
+оффсета</SPAN><SPAN LANG="it-IT">, message- </SPAN><SPAN LANG="ru-RU">тела
+отправляемого соощения в </SPAN><SPAN LANG="da-DK">json,
+messageId - </SPAN><SPAN LANG="ru-RU">идентификатор
+сообщения</SPAN><SPAN LANG="en-US">, requestId -
+</SPAN><SPAN LANG="ru-RU">идентификатор сессии</SPAN>.</FONT></FONT></FONT></P>
+<P DIR="LTR" ALIGN=LEFT STYLE="margin-bottom: 0in; background: #ffffff; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+<FONT COLOR="#000000"><FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="ru-RU">Шаблон
+начала выполнения операции</SPAN>: &quot;<SPAN LANG="ru-RU">Начало
+выполнения операции</SPAN><SPAN LANG="en-US">:
+{requestName}. </SPAN><SPAN LANG="ru-RU">Входные параметры</SPAN><SPAN LANG="it-IT">:
+{request}&quot;, </SPAN><SPAN LANG="ru-RU">где </SPAN><SPAN LANG="en-US">requestName
+- </SPAN><SPAN LANG="ru-RU">наименование команды</SPAN><SPAN LANG="en-US">,
+request- </SPAN><SPAN LANG="ru-RU">набо входных
+параметров</SPAN>.</FONT></FONT></FONT></P>
+<P DIR="LTR" ALIGN=LEFT STYLE="margin-bottom: 0in; background: #ffffff; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+<FONT COLOR="#000000"><FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="ru-RU">Шаблон
+успешного окончания выполнения операции
+</SPAN>: &quot;Операция <SPAN LANG="fr-FR">{operation}
+</SPAN><SPAN LANG="ru-RU">выполнена успешно за
+</SPAN><SPAN LANG="en-US">{elapsedTime} </SPAN>мс.&quot;  <SPAN LANG="ru-RU">где
+</SPAN><SPAN LANG="fr-FR">operation - </SPAN><SPAN LANG="ru-RU">наименование
+команды</SPAN><SPAN LANG="en-US">, elapsedTime - </SPAN><SPAN LANG="ru-RU">время
+выполнения операции</SPAN>.</FONT></FONT></FONT></P>
+<P DIR="LTR" ALIGN=LEFT STYLE="margin-bottom: 0in; background: #ffffff; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+<FONT COLOR="#000000"><FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="ru-RU">Шаблон
+неуспешного окончания выполнения
+операции</SPAN>: &quot;<SPAN LANG="ru-RU">Ошибка при
+выполнении операции </SPAN><SPAN LANG="fr-FR">{operation}&quot;,
+</SPAN><SPAN LANG="ru-RU">где </SPAN><SPAN LANG="fr-FR">operation-
+</SPAN><SPAN LANG="ru-RU">наименование команды</SPAN>.</FONT></FONT></FONT></P>
+<P DIR="LTR" ALIGN=LEFT STYLE="margin-bottom: 0in; background: #ffffff; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+<FONT COLOR="#000000"><FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="ru-RU">Шаблон
+отклонения сообщения</SPAN>: &quot;Отказ в
+обработке сообщения. Причина<SPAN LANG="en-US">:
+{reason}&quot;, </SPAN><SPAN LANG="ru-RU">где </SPAN><SPAN LANG="en-US">reason-
+</SPAN>причина отказа</FONT></FONT></FONT></P>
+<P DIR="LTR" ALIGN=LEFT STYLE="margin-bottom: 0in; background: #ffffff; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+<FONT COLOR="#000000">     <FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt">2.
+<SPAN LANG="ru-RU">Логирование </SPAN>Api-<SPAN LANG="ru-RU">вызовов</SPAN></FONT></FONT></FONT></P>
+<P DIR="LTR" ALIGN=LEFT STYLE="margin-bottom: 0in; background: #ffffff; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+<BR>
+</P>
+<P DIR="LTR" ALIGN=LEFT STYLE="margin-bottom: 0in; background: #ffffff; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+<FONT COLOR="#000000"><FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="ru-RU">Шаблон
+успешного выполнения операции  </SPAN>:
+&quot;Операция <SPAN LANG="fr-FR">{operation:l} </SPAN><SPAN LANG="ru-RU">выполнена
+успешно за </SPAN><SPAN LANG="en-US">{elapsedTime} </SPAN>мс.&quot;,
+<SPAN LANG="ru-RU">где </SPAN><SPAN LANG="fr-FR">operation -
+</SPAN><SPAN LANG="ru-RU">наименование команды</SPAN><SPAN LANG="en-US">,
+elapsedTime - </SPAN><SPAN LANG="ru-RU">время выполнения
+операции</SPAN>.</FONT></FONT></FONT></P>
+<P DIR="LTR" ALIGN=LEFT STYLE="margin-bottom: 0in; background: #ffffff; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+<FONT COLOR="#000000"><FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="ru-RU">Шаблон
+неуспешного выполнения операции  </SPAN>:
+&quot;<SPAN LANG="ru-RU">Ошибка при выполнении
+операции </SPAN><SPAN LANG="fr-FR">{operation:l}.&quot;, </SPAN><SPAN LANG="ru-RU">где
+</SPAN><SPAN LANG="fr-FR">operation- </SPAN><SPAN LANG="ru-RU">наименование
+команды</SPAN>.</FONT></FONT></FONT></P>
+<P DIR="LTR" ALIGN=LEFT STYLE="margin-bottom: 0in; background: #ffffff; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+<BR>
+</P>
+<P DIR="LTR" ALIGN=LEFT STYLE="margin-bottom: 0in; background: #ffffff; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+<FONT COLOR="#000000"><FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Debug
+- <SPAN LANG="ru-RU">логирование для дебага</SPAN>.</FONT></FONT></FONT></P>
+<P DIR="LTR" ALIGN=LEFT STYLE="margin-bottom: 0in; background: #ffffff; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+<FONT COLOR="#000000"><FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="de-DE">Information
+- </SPAN>логирование информации общего
+характера.</FONT></FONT></FONT></P>
+<P DIR="LTR" ALIGN=LEFT STYLE="margin-bottom: 0in; background: #ffffff; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+<FONT COLOR="#000000"><FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">Warning
+- </SPAN><SPAN LANG="ru-RU">логирование предупреждений</SPAN>,
+<SPAN LANG="ru-RU">потенциальных ошибок</SPAN>.
+Например, <SPAN LANG="ru-RU">логирование
+сообщений</SPAN>, <SPAN LANG="ru-RU">которые уже
+были приняты и обработаны</SPAN>.</FONT></FONT></FONT></P>
+<P DIR="LTR" ALIGN=LEFT STYLE="margin-bottom: 0in; background: #ffffff; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+<FONT COLOR="#000000"><FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Error
+- <SPAN LANG="ru-RU">логирование ошибок системы</SPAN>.</FONT></FONT></FONT></P>
+<P DIR="LTR" ALIGN=LEFT STYLE="margin-bottom: 0in; background: #ffffff; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+<FONT COLOR="#000000"><FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Fatal
+- <SPAN LANG="ru-RU">логирование наиболее
+критических ошибок</SPAN>, <SPAN LANG="ru-RU">которые
+могут привести к частичному отказу
+системы</SPAN>.</FONT></FONT></FONT></P>
+<P DIR="LTR" ALIGN=LEFT STYLE="margin-bottom: 0in; background: #ffffff; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+<BR>
+</P>
+<P DIR="LTR" ALIGN=LEFT STYLE="margin-bottom: 0in; background: #ffffff; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+<BR>
+</P>
+<P DIR="LTR" ALIGN=LEFT STYLE="margin-bottom: 0in; background: #ffffff; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+<FONT COLOR="#000000"> <FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="ru-RU">Логирование
+взаимодействия с брокером сообщений
+</SPAN>Kafka</FONT></FONT></FONT></P>
+<P DIR="LTR" ALIGN=LEFT STYLE="margin-bottom: 0in; background: #ffffff; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+<FONT COLOR="#000000"><FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Шаблон
+при успешной отправке сообщения в брокер
+ : &quot;<SPAN LANG="ru-RU">Сообщение </SPAN><SPAN LANG="it-IT">{messageId}
+</SPAN><SPAN LANG="ru-RU">успешно опубликовано в
+топик </SPAN><SPAN LANG="en-US">{topic:l},
+partition:{partition}, offset:{offSet}&quot;, </SPAN><SPAN LANG="ru-RU">где
+</SPAN><SPAN LANG="it-IT">messageId - </SPAN><SPAN LANG="ru-RU">идентификатор
+сообщения</SPAN><SPAN LANG="en-US">, topic - </SPAN><SPAN LANG="ru-RU">наименование
+топика</SPAN><SPAN LANG="fr-FR">, partition - </SPAN>номер
+партишена<SPAN LANG="en-US">, offset - </SPAN><SPAN LANG="ru-RU">номер
+оффсета</SPAN>.</FONT></FONT></FONT></P>
+<P DIR="LTR" ALIGN=LEFT STYLE="margin-bottom: 0in; background: #ffffff; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+<FONT COLOR="#000000"><FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Шаблон
+подписки на топик : &quot;Подписка на топик
+<SPAN LANG="en-US">{topicName}&quot;, </SPAN><SPAN LANG="ru-RU">где
+</SPAN><SPAN LANG="en-US">topicName - </SPAN><SPAN LANG="ru-RU">наименование
+топика</SPAN>.</FONT></FONT></FONT></P>
+<P DIR="LTR" ALIGN=LEFT STYLE="margin-bottom: 0in; background: #ffffff; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+<FONT COLOR="#000000"><FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="ru-RU">Шаблон
+вычитывания сообщения из брокера </SPAN>:
+&quot;Получено сообщение из топика
+<SPAN LANG="en-US">{topicName}. Partition:{partition},
+offset:{offset}, message:{message}, id:{messageId},
+requestId:{requestId}&quot;, </SPAN><SPAN LANG="ru-RU">где
+</SPAN><SPAN LANG="en-US">topicName - </SPAN><SPAN LANG="ru-RU">наименование
+топика</SPAN><SPAN LANG="fr-FR">, partition - </SPAN>номер
+партишена<SPAN LANG="en-US">, offset - </SPAN><SPAN LANG="ru-RU">номер
+оффсета</SPAN><SPAN LANG="it-IT">, message- </SPAN><SPAN LANG="ru-RU">тела
+отправляемого соощения в </SPAN><SPAN LANG="da-DK">json,
+messageId - </SPAN><SPAN LANG="ru-RU">идентификатор
+сообщения</SPAN><SPAN LANG="en-US">, requestId -
+</SPAN><SPAN LANG="ru-RU">идентификатор сессии</SPAN>.</FONT></FONT></FONT></P>
+<P DIR="LTR" ALIGN=LEFT STYLE="margin-bottom: 0in; background: #ffffff; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+<FONT COLOR="#000000"><FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="ru-RU">Шаблон
+начала выполнения операции</SPAN>: &quot;<SPAN LANG="ru-RU">Начало
+выполнения операции</SPAN><SPAN LANG="en-US">:
+{requestName}. </SPAN><SPAN LANG="ru-RU">Входные параметры</SPAN><SPAN LANG="it-IT">:
+{request}&quot;, </SPAN><SPAN LANG="ru-RU">где </SPAN><SPAN LANG="en-US">requestName
+- </SPAN><SPAN LANG="ru-RU">наименование команды</SPAN><SPAN LANG="en-US">,
+request- </SPAN><SPAN LANG="ru-RU">набо входных
+параметров</SPAN>.</FONT></FONT></FONT></P>
+<P DIR="LTR" ALIGN=LEFT STYLE="margin-bottom: 0in; background: #ffffff; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+<FONT COLOR="#000000"><FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="ru-RU">Шаблон
+успешного окончания выполнения операции
+</SPAN>: &quot;Операция <SPAN LANG="fr-FR">{operation}
+</SPAN><SPAN LANG="ru-RU">выполнена успешно за
+</SPAN><SPAN LANG="en-US">{elapsedTime} </SPAN>мс.&quot;  <SPAN LANG="ru-RU">где
+</SPAN><SPAN LANG="fr-FR">operation - </SPAN><SPAN LANG="ru-RU">наименование
+команды</SPAN><SPAN LANG="en-US">, elapsedTime - </SPAN><SPAN LANG="ru-RU">время
+выполнения операции</SPAN>.</FONT></FONT></FONT></P>
+<P DIR="LTR" ALIGN=LEFT STYLE="margin-bottom: 0in; background: #ffffff; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+<FONT COLOR="#000000"><FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="ru-RU">Шаблон
+неуспешного окончания выполнения
+операции</SPAN>: &quot;<SPAN LANG="ru-RU">Ошибка при
+выполнении операции </SPAN><SPAN LANG="fr-FR">{operation}&quot;,
+</SPAN><SPAN LANG="ru-RU">где </SPAN><SPAN LANG="fr-FR">operation-
+</SPAN><SPAN LANG="ru-RU">наименование команды</SPAN>.</FONT></FONT></FONT></P>
+<P DIR="LTR" ALIGN=LEFT STYLE="margin-bottom: 0in; background: #ffffff; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+<FONT COLOR="#000000"><FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="ru-RU">Шаблон
+отклонения сообщения</SPAN>: &quot;Отказ в
+обработке сообщения. Причина<SPAN LANG="en-US">:
+{reason}&quot;, </SPAN><SPAN LANG="ru-RU">где </SPAN><SPAN LANG="en-US">reason-
+</SPAN>причина отказа</FONT></FONT></FONT></P>
+<P DIR="LTR" ALIGN=LEFT STYLE="margin-bottom: 0in; background: #ffffff; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+<FONT COLOR="#000000">     <FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt">2.
+<SPAN LANG="ru-RU">Логирование </SPAN>Api-<SPAN LANG="ru-RU">вызовов</SPAN></FONT></FONT></FONT></P>
+<P DIR="LTR" ALIGN=LEFT STYLE="margin-bottom: 0in; background: #ffffff; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+<BR>
+</P>
+<P DIR="LTR" ALIGN=LEFT STYLE="margin-bottom: 0in; background: #ffffff; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+<FONT COLOR="#000000"><FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="ru-RU">Шаблон
+успешного выполнения операции  </SPAN>:
+&quot;Операция <SPAN LANG="fr-FR">{operation:l} </SPAN><SPAN LANG="ru-RU">выполнена
+успешно за </SPAN><SPAN LANG="en-US">{elapsedTime} </SPAN>мс.&quot;,
+<SPAN LANG="ru-RU">где </SPAN><SPAN LANG="fr-FR">operation -
+</SPAN><SPAN LANG="ru-RU">наименование команды</SPAN><SPAN LANG="en-US">,
+elapsedTime - </SPAN><SPAN LANG="ru-RU">время выполнения
+операции</SPAN>.</FONT></FONT></FONT></P>
+<P DIR="LTR" ALIGN=LEFT STYLE="margin-bottom: 0in; background: #ffffff; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+<FONT COLOR="#000000"><FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="ru-RU">Шаблон
+неуспешного выполнения операции  </SPAN>:
+&quot;<SPAN LANG="ru-RU">Ошибка при выполнении
+операции </SPAN><SPAN LANG="fr-FR">{operation:l}.&quot;, </SPAN><SPAN LANG="ru-RU">где
+</SPAN><SPAN LANG="fr-FR">operation- </SPAN><SPAN LANG="ru-RU">наименование
+команды</SPAN>.</FONT></FONT></FONT></P>
+<DIV TYPE=FOOTER>
+	<P DIR="LTR" CLASS="western" STYLE="margin-top: 0.16in; margin-bottom: 0.19in">
+	<BR><BR>
+	</P>
+</DIV>
+</BODY>
+</HTML>
