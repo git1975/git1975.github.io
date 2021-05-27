@@ -1248,15 +1248,15 @@ response = getFile(myCoolResponse.json);</SPAN></FONT></FONT></FONT></P>
 <P STYLE="margin-bottom: 0in"><FONT COLOR="#000000"> </FONT>
 </P>
 <P STYLE="margin-bottom: 0in"><FONT COLOR="#000000"><FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">mockMvc.perform(get(&quot;/deposits&quot;)</SPAN></FONT></FONT></FONT></P>
-<P STYLE="margin-bottom: 0in"><FONT COLOR="#000000">       
+<P STYLE="margin-bottom: 0in"><FONT COLOR="#000000">
 <FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">.contentType(APPLICATION_JSON_VALUE)</SPAN></FONT></FONT></FONT></P>
-<P STYLE="margin-bottom: 0in"><FONT COLOR="#000000">       
+<P STYLE="margin-bottom: 0in"><FONT COLOR="#000000">
 <FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">.param(&quot;clientId&quot;,
 &quot;ASSR52&quot;))</SPAN></FONT></FONT></FONT></P>
-<P STYLE="margin-bottom: 0in"><FONT COLOR="#000000">       
+<P STYLE="margin-bottom: 0in"><FONT COLOR="#000000">
 <FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">.andExpect(content().json(response))
 // </SPAN>проверяем<SPAN LANG="en-US"> </SPAN>ответ<SPAN LANG="en-US">!</SPAN></FONT></FONT></FONT></P>
-<P STYLE="margin-bottom: 0in"><FONT COLOR="#000000">       
+<P STYLE="margin-bottom: 0in"><FONT COLOR="#000000">
 <FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">.andExpect(status().isOk());</SPAN></FONT></FONT></FONT></P>
 <P LANG="en-US" STYLE="margin-bottom: 0in"><BR>
 </P>
@@ -1565,7 +1565,7 @@ void someMethod() { // PREFER</SPAN></FONT></FONT></FONT></P>
 <P STYLE="margin-bottom: 0in"><FONT COLOR="#000000">        <FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">throw
 e;</SPAN></FONT></FONT></FONT></P>
 <P STYLE="margin-bottom: 0in"><FONT COLOR="#000000">    <FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">}</SPAN></FONT></FONT></FONT></P>
-<P STYLE="margin-bottom: 0in"><FONT COLOR="#000000">   
+<P STYLE="margin-bottom: 0in"><FONT COLOR="#000000">
 <FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">doSomething();</SPAN></FONT></FONT></FONT></P>
 <P STYLE="margin-bottom: 0in"><FONT COLOR="#000000"><FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">}</SPAN></FONT></FONT></FONT></P>
 <P LANG="en-US" STYLE="margin-bottom: 0in"><BR>
@@ -1575,7 +1575,7 @@ void someMethod() { // AVOID</SPAN></FONT></FONT></FONT></P>
 <P STYLE="margin-bottom: 0in"><FONT COLOR="#000000">    <FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">if
 (condition) { </SPAN></FONT></FONT></FONT>
 </P>
-<P STYLE="margin-bottom: 0in"><FONT COLOR="#000000">       
+<P STYLE="margin-bottom: 0in"><FONT COLOR="#000000">
 <FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">doSomething();</SPAN></FONT></FONT></FONT></P>
 <P STYLE="margin-bottom: 0in"><FONT COLOR="#000000">    <FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">}
 else {</SPAN></FONT></FONT></FONT></P>
@@ -1696,7 +1696,7 @@ PREFER</SPAN></FONT></FONT></FONT></P>
 filterAndConvert(Flux&lt;Entity&gt; entities) {</SPAN></FONT></FONT></FONT></P>
 <P STYLE="margin-bottom: 0in"><FONT COLOR="#000000">   <FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">return
 entities.filter(Utils::predicate)</SPAN></FONT></FONT></FONT></P>
-<P STYLE="margin-bottom: 0in"><FONT COLOR="#000000">         
+<P STYLE="margin-bottom: 0in"><FONT COLOR="#000000">
 <FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">.map(Converter::convertToOtherEntity)</SPAN></FONT></FONT></FONT></P>
 <P STYLE="margin-bottom: 0in"><FONT COLOR="#000000"><FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">}</SPAN></FONT></FONT></FONT></P>
 <P LANG="en-US" STYLE="margin-bottom: 0in"><BR>
@@ -1704,14 +1704,14 @@ entities.filter(Utils::predicate)</SPAN></FONT></FONT></FONT></P>
 <P STYLE="margin-bottom: 0in"><FONT COLOR="#000000"><FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">someEntityFlux</SPAN></FONT></FONT></FONT></P>
 <P STYLE="margin-bottom: 0in"><FONT COLOR="#000000">   <FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">.flatMap(/*
 converting */)</SPAN></FONT></FONT></FONT></P>
-<P STYLE="margin-bottom: 0in"><FONT COLOR="#000000">  
+<P STYLE="margin-bottom: 0in"><FONT COLOR="#000000">
 <FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">.transform(this::filterAndConvert)</SPAN></FONT></FONT></FONT></P>
 <P LANG="en-US" STYLE="margin-bottom: 0in"><BR>
 </P>
 <P STYLE="margin-bottom: 0in"><FONT COLOR="#000000"><FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">otherEntityFlux</SPAN></FONT></FONT></FONT></P>
 <P STYLE="margin-bottom: 0in"><FONT COLOR="#000000">    <FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">.map(/*
 do something */)</SPAN></FONT></FONT></FONT></P>
-<P STYLE="margin-bottom: 0in"><FONT COLOR="#000000">   
+<P STYLE="margin-bottom: 0in"><FONT COLOR="#000000">
 <FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">.transform(this::filterAndConvert)</SPAN></FONT></FONT></FONT></P>
 <P LANG="en-US" STYLE="margin-bottom: 0in"><BR>
 </P>
@@ -1723,18 +1723,18 @@ AVOID</SPAN></FONT></FONT></FONT></P>
 <P STYLE="margin-bottom: 0in"><FONT COLOR="#000000"><FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">someEntityFlux</SPAN></FONT></FONT></FONT></P>
 <P STYLE="margin-bottom: 0in"><FONT COLOR="#000000">   <FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">.flatMap(/*
 converting */)</SPAN></FONT></FONT></FONT></P>
-<P STYLE="margin-bottom: 0in"><FONT COLOR="#000000">  
+<P STYLE="margin-bottom: 0in"><FONT COLOR="#000000">
 <FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">.filter(Utils::predicate)</SPAN></FONT></FONT></FONT></P>
-<P STYLE="margin-bottom: 0in"><FONT COLOR="#000000">  
+<P STYLE="margin-bottom: 0in"><FONT COLOR="#000000">
 <FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">.map(Converter::convertToOtherEntity)</SPAN></FONT></FONT></FONT></P>
 <P LANG="en-US" STYLE="margin-bottom: 0in"><BR>
 </P>
 <P STYLE="margin-bottom: 0in"><FONT COLOR="#000000"><FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">otherEntityFlux</SPAN></FONT></FONT></FONT></P>
 <P STYLE="margin-bottom: 0in"><FONT COLOR="#000000">   <FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">.map(/*
 do something */)</SPAN></FONT></FONT></FONT></P>
-<P STYLE="margin-bottom: 0in"><FONT COLOR="#000000">  
+<P STYLE="margin-bottom: 0in"><FONT COLOR="#000000">
 <FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">.filter(Utils::predicate)</SPAN></FONT></FONT></FONT></P>
-<P STYLE="margin-bottom: 0in"><FONT COLOR="#000000">  
+<P STYLE="margin-bottom: 0in"><FONT COLOR="#000000">
 <FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt">.<SPAN LANG="en-US">map</SPAN>(<SPAN LANG="en-US">Converter</SPAN>::<SPAN LANG="en-US">convertToOtherEntity</SPAN>)</FONT></FONT></FONT></P>
 <P STYLE="margin-bottom: 0in"><FONT COLOR="#000000"><FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Метод
 <SPAN LANG="pt-PT">transform </SPAN>позволяет применять
@@ -1839,7 +1839,7 @@ PREFER</SPAN></FONT></FONT></FONT></P>
 <P STYLE="margin-bottom: 0in"><FONT COLOR="#000000"><FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">public
 interface Something { </SPAN></FONT></FONT></FONT>
 </P>
-<P STYLE="margin-bottom: 0in"><FONT COLOR="#000000">   
+<P STYLE="margin-bottom: 0in"><FONT COLOR="#000000">
 <FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">IndexedSomethingDatum
 doSomething();</SPAN></FONT></FONT></FONT></P>
 <P STYLE="margin-bottom: 0in"><FONT COLOR="#000000"><FONT FACE="Helvetica, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">}</SPAN></FONT></FONT></FONT></P>
